@@ -3,50 +3,89 @@
 }
 
 body {
-    margin: 0;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 10px;
-    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+    background:lightskyblue;
 }
 
-
-/* For header and footer */
-
-.header {
-    background-color: transparent;
-    padding: 15px;
+/* For header */
+.header
+{
+    padding: 25px;
     text-align: center;
+    background: whitesmoke;
 }
 
-.footer {
-    background-color: whitesmoke;
-    padding: 10px;
-    text-align: left;
+/*styling the top navigation bar*/
+.topnav
+{
+    overflow: hidden;
+    background-color:lightblue;
 }
-
-
-/* Create three equal columns that floats next to each other */
-
-.column {
+/* Style the topnav links */
+.topnav a {
     float: left;
-    width: 33.33%;
-    padding: 15px;
-}
-
-
-/* Clear floats after the columns */
-
-.row:after {
+    display: block;
+    color: darkblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: darkblue;
+  }
+  /* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: right;
+    width: 20%;
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+  /* Add a card effect for articles */
+.card {
+    background-color: whitesmoke;
+    padding: 25px;
+    margin-top: 15px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
     content: "";
     display: table;
     clear: both;
-}
-
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-
-@media screen and (max-width:600px) {
-    .column {
-        width: 100%;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
     }
-}
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+  
