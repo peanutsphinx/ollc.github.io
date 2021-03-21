@@ -1,93 +1,134 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body {
-  /*background credit to uigradients.com*/
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 15px;
-    background: #2193b0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body, html {
+  margin: 0;
+  height: 100%;
+  background: #2193b0;
+  background: -webkit-linear-gradient(to right, #2193b0, #6dd5ed);
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-/* For header */
-.header
-{
-    padding: 25px;
-    text-align: center;
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  padding: 20px, 10px;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: -75%;
 }
 
-/*styling the top navigation bar*/
-.topnav
-{
-    overflow: hidden;
-    background-color:lightblue;
-}
-/* Style the topnav links */
 .topnav a {
-    float: left;
+  float: left;
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a:active {
+  background-color: white;
+  color: black;
+}
+
+.topnav-right {
+  float: right;
+}
+
+/*for mobile*/
+
+@media screen and (max-width: 500px) {
+  .topnav a {
+    float: none;
     display: block;
-    color: darkblue;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    text-align: left;
   }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: darkblue;
+  .topnav-right {
+    float: none;
   }
-  /* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-    float: left;
-    width: 75%;
-  }
-  
-  /* Right column */
-  .rightcolumn {
-    float: right;
-    width: 20%;
-    padding-left: 30px;
-    padding-top: 10px;
-  }
-  /* Add a card effect for articles */
-.card {
-    background-color: whitesmoke;
-    padding: 25px;
-    margin-top: 15px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Footer */
-  .footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-    margin-top: 20px;
-  }
-  
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-      width: 100%;
-      padding: 0;
-    }
-  }
-  
-  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-  @media screen and (max-width: 400px) {
-    .topnav a {
-      float: none;
-      width: 100%;
-    }
-  }
-  
+}
+
+#home {
+  height: 1000px;
+  border-style: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gallery {
+  height: 1000px;
+  border-style: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#program {
+  height: 1000px;
+  border-style: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#requirements {
+  height: 1000px;
+  border-style: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+h1 {
+  margin: 100px;
+  text-align: center;
+}
+
+.footer
+{
+  width: 25%;
+  background-color: floralwhite;
+  color: black;
+}
+.icons
+{
+  padding: 15px;
+  float: center;
+}
+
+/*For home*/
+.aboutUs, .contactDetails
+{
+  border-style: dotted;
+  background-color:whitesmoke;
+  padding: 30px;
+}
+
+/*table styling*/
+table
+{
+  border-collapse:collapse;
+  width: 100%;
+}
+table, th, td
+{
+  border: 1px solid black;
+  height: 50px;
+  text-align: center;
+  padding: 5px;
+  background-color: cyan;
+}
+td
+{
+  background-color:whitesmoke;
+}
