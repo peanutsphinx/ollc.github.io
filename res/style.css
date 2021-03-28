@@ -1,30 +1,35 @@
+
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body, html {
   margin: 0;
-  height: 100%;
-  background: #2193b0;
-  background: -webkit-linear-gradient(to right, #2193b0, #6dd5ed);
-  background: linear-gradient(to right, #2193b0, #6dd5ed);
-  font-family: Arial, Helvetica, sans-serif;
+  height: auto;
+  padding: 0;
+  background: #1488cc;
+  background: -webkit-linear-gradient(to right, #1488cc, #2b32b2);
+  background: linear-gradient(to right, #1488cc, #2b32b2);
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-.topnav {
+
+#topnav {
   overflow: hidden;
   background-color: black;
-  padding: 20px, 10px;
-  position: fixed;
+  padding: 20px, 5px;
+  position:sticky;
   top: 0%;
   width: 100%;
-  height: -75%;
+  height: -50%;
 }
 
-.topnav a {
+
+#topnav a {
   float: left;
   display: block;
-  color: white;
+  color: white; 
   text-align: right;
   padding: 14px 16px;
   text-decoration: none;
@@ -34,20 +39,19 @@ body, html {
   cursor: pointer;
 }
 
-.topnav a:hover {
+#topnav a:hover {
   background-color: white;
   color: black;
 }
 
-.topnav a:active {
+#topnav a:active {
   background-color: white;
   color: black;
 }
 
-.topnav-right {
-  float: left;
+#topnav-right {
+  float: right;
 }
-
 /*for mobile*/
 
 @media screen and (max-width: 500px) {
@@ -61,65 +65,191 @@ body, html {
   }
 }
 
+/*For content*/
+
 #home {
-  height: 100px;
+  height: 1000px;
   border-style: hidden;
   display: inline-block;
   width: 100%;
+  margin-top: -75px;
+  margin-bottom: 100px;
 }
 
-#gallery {
-  height: 100px;
+#scholarship
+{
+  height: 1000px;
   border-style: hidden;
   display: inline-block;
   width: 100%;
+  margin-bottom: 10px;
+}
+#gallery {
+  height: 1000px;
+  border-style: hidden;
+  display: inline-block;
+  width: 100%;
+  margin-top: -10px;
+  margin-bottom: 1800px;
 }
 
 #program {
-  height: 100px;
+  height: 1000px;
+  border-style: hidden;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 800px;
+}
+
+#admission {
+  height: 1000px;
+  border-style: hidden;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 50px;
+}
+#contact {
+  height: 1000px;
   border-style: hidden;
   display: inline-block;
   width: 100%;
 }
 
-#requirements {
-  height: 100px;
-  border-style: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-h1 {
-  margin: 100px;
-  text-align: center;
-}
-h2
-{
-  text-align: left;
-  font-size: 25px;
-}
 /*For home*/
 
 .aboutUs {
-  border-style: solid;
+  border-style:solid;
   background-color: whitesmoke;
   padding: 1px;
-  position: sticky;
+  position: static;
+}
+
+.missionAndVisionSection
+{
+  position: static;
+  display: contents;
+  align-items: center;
+}
+
+.scholarship
+{
+  border-style:solid;
+  background-color: whitesmoke;
+  padding: 1px;
+  position: static;
+}
+
+.mission, .vision, .scholarship, .contact, .admission, .procedure
+{
+  border-style:solid;
+  background-color: whitesmoke;
+  padding: 1px;
+  position: static;
+}
+
+.row
+{
+  display: flex;
 }
 
 /* Create two equal columns that floats next to each other */
+
 .column {
   float: left;
   width: 50%;
-  padding: 10px;
-  border-style: solid;
+  padding: 20px;
+  height: fit-content;
 }
 
 /* Clear floats after the columns */
+
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+
+.icons {
+  float: left;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  margin: 0 10px 0 0;
+}
+
+.banner
+{
+  padding-top: 100px;
+  width: 100%;
+}
+
+.gallery {
+  padding-top: 100px;
+  padding-left: 50px;
+  width: 800px;
+  height: 600px;
+  align-items: center;
+}
+
+.sectionA
+{
+  width: 720px;
+  height: 480px;
+  padding: 25px;
+}
+
+.sectionB
+{
+  width: 720px;
+  height: 480px;
+  padding: 25px;
+}
+
+/*Styling for basic html elements*/
+h1 {
+  margin: 75px;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  font-weight:lighter;
+}
+
+h2 {
+  text-align: left;
+  font-size: 24px;
+  color: white;
+}
+
+h3
+{
+  text-align: center;
+  color: white;
+}
+
+p
+{
+  font-size: 24px;
+  font-style:normal;
+  font-weight: lighter;
+  text-align: center;
+  color: white;
+}
+
+p.onWhiteBG
+{
+  color: black;
+}
+
+a.facebook
+{
+  text-decoration: none;
+  color: black;
+}
+
+div
+{
+  white-space:normal;
 }
 
 /*table styling*/
@@ -134,109 +264,13 @@ table, th, td {
   height: 50px;
   text-align: center;
   padding: 5px;
-  background-color: cyan;
+  font-size: 15px;
 }
 
-td {
-  background-color: whitesmoke;
-}
-
-/*for slideshow*/
-
-/*slideshow container*/
-
-.gallery_container {
-  max-width: 1000px;
-  margin: auto;
-  position: relative;
-}
-
-/*hide images by default*/
-
-.gallery {
-  display: none;
-}
-
-/*for buttons*/
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.slideIndex {
-  color: black;
-  font-size: 30px;
-  padding-top: 100px;
-  padding-left: 5px;
-  position: absolute;
-  top: 0;
-  font-weight: bold;
-}
-
-/* Fading animation */
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.0s;
-  animation-name: fade;
-  animation-duration: 1.0s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4
-  }
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-  to {
-    opacity: 1
-  }
-}
-
-/*for image resizing*/
-
-.slideshowImg {
-  padding-top: 100px;
-  width: 1920px;
-  height: 900px;
-  align-items: center;
-}
-
-.contactUsFooter
+th
 {
-  position:fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2.5%;
+  background-color: skyblue;
+}
+td {
   background-color: white;
 }
